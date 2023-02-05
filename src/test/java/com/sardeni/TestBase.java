@@ -13,11 +13,10 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
 
-
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://hh.ru";
+    //    Configuration.baseUrl = "https://hh.ru";
     //    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -28,9 +27,7 @@ public class TestBase {
 
     @BeforeEach
     void addListenerAndOpenPage() {
-
         SelenideLogger.addListener("allure", new AllureSelenide());
-        open("/vacancy/75846595");
     }
 
     @AfterEach
