@@ -1,6 +1,7 @@
 package com.sardeni;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
@@ -10,6 +11,8 @@ import static io.qameta.allure.Allure.step;
 public class CianVacancyTests extends TestBase {
 
     @Test
+    @Tag("smoke")
+    @Tag("regress")
     @DisplayName("Названия вакансии, зарплата, опыт, формат работы, оформление")
     public void checkTitleVacanCy() {
 
@@ -26,6 +29,7 @@ public class CianVacancyTests extends TestBase {
     }
 
     @Test
+    @Tag("regress")
     @DisplayName("Проверка блока о компании: название, лого, иконнка проверки")
     public void checkBlockCompanyData() {
 
