@@ -39,45 +39,46 @@ Allure-отчет включает в себя:
 
 ### Локальный запуск тестов
 ```
-gradle clean test -Denv=local
+gradle clean test
 ```
 
 При необходимости можно переопределить параметры запуска
 ```
-gradle clean test
--Denv=local
--Dbrowser=${BROWSER_NAME}
+gradle clean 
+test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
+-Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
+-DbrowserSize=${RESOLUTION}
 -DbaseUrl=${BASE_URL}
 ```
 
 ### Запуск тестов на удаленном браузере
 ```
-gradle clean test -Denv=remote
+gradle clean test
 ```
 При необходимости также можно переопределить параметры запуска
 
 ```
-gradle clean test -Denv=remote
--Dbrowser=${BROWSER_NAME}
+gradle clean
+test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
+-Dbrowser=${BROWSER}
 -DbrowserМersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
+-DbrowserSize=${RESOLUTION}
 -DbaseUrl=${BASE_URL}
--DremoteUrl=${REMOTE_BROWSER_URL}
+-DremoteUrl=${REMOTE_URL}
 ```
 
 ### Параметры сборки
 
-* <code>BROWSER_NAME</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
+* <code>BROWSER</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
 * <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>105.0</code>.
-* <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты.
+* <code>RESOLUTION</code> – размер окна браузера, в котором будут выполняться тесты.
 * <code>BASE_URL</code> – Url, по которому будет открываться тестируемое приложение. По-умолчанию - <code>1920x1080</code>.
-* <code>REMOTE_BROWSER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+* <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
 <p align="center">
-<img title="Jenkins Build" src="images/screenshots/jenkinsBuild.png">
+<img title="Jenkins Build" src="images/screenshots/Jenkins.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Пример Allure-отчета
