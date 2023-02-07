@@ -64,12 +64,14 @@ task smoke_tests(type: Test) {
     useJUnitPlatform {
         includeTags("smoke")
     }
+    systemProperties(System.getProperties())
 }
 
 task regress_tests(type: Test) {
     useJUnitPlatform {
         includeTags("regress")
     }
+    systemProperties(System.getProperties())
 }
 test {
     useJUnitPlatform()
