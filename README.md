@@ -106,5 +106,5 @@ test/smoke_tests/regress_tests - запуск всех тестов/только
 
 К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/gif/videoExample.gif">
+  <img title="Selenoid Video" src="images/gifs/videoExample.gif">
 </p>
