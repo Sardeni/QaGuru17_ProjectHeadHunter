@@ -62,7 +62,7 @@ gradle clean test
 gradle clean
 test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
 -Dbrowser=${BROWSER}
--DbrowserМersion=${BROWSER_VERSION}
+-DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${RESOLUTION}
 -DbaseUrl=${BASE_URL}
 -DremoteUrl=${REMOTE_URL}
@@ -72,8 +72,8 @@ test/smoke_tests/regress_tests - запуск всех тестов/только
 
 * <code>BROWSER</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
 * <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>105.0</code>.
-* <code>RESOLUTION</code> – размер окна браузера, в котором будут выполняться тесты.
-* <code>BASE_URL</code> – Url, по которому будет открываться тестируемое приложение. По-умолчанию - <code>1920x1080</code>.
+* <code>RESOLUTION</code> – размер окна браузера, в котором будут выполняться тесты.  По-умолчанию - <code>1920x1080</code>.
+* <code>BASE_URL</code> – Url, по которому будет открываться тестируемое приложение.
 * <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
