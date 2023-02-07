@@ -66,6 +66,11 @@ task smoke_tests(type: Test) {
     }
 }
 
+task regress_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("regress")
+    }
+}
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
