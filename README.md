@@ -46,10 +46,9 @@ gradle clean test
 ```
 gradle clean 
 test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${RESOLUTION}
--DbaseUrl=${BASE_URL}
+-Dbrowser=${browserName}
+-DbrowserVersion=${browserVersion}
+-DbrowserSize=${browserSize}
 ```
 
 ### Запуск тестов на удаленном браузере
@@ -61,20 +60,18 @@ gradle clean test
 ```
 gradle clean
 test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${RESOLUTION}
--DbaseUrl=${BASE_URL}
--DremoteUrl=${REMOTE_URL}
+-Dbrowser=${browserName}
+-DbrowserVersion=${browserVersion}
+-DbrowserSize=${browserSize}
+-DremoteUrl=${remoteURL}
 ```
 
 ### Параметры сборки
 
-* <code>BROWSER</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
-* <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>105.0</code>.
-* <code>RESOLUTION</code> – размер окна браузера, в котором будут выполняться тесты.  По-умолчанию - <code>1920x1080</code>.
-* <code>BASE_URL</code> – Url, по которому будет открываться тестируемое приложение.
-* <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+* <code>browserName</code> – браузер, в котором будут выполняться тесты. По-умолчанию - <code>chrome</code>.
+* <code>browserVersion</code> – версия браузера, в которой будут выполняться тесты. По-умолчанию - <code>105.0</code>.
+* <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты.  По-умолчанию - <code>1920x1080</code>.
+* <code>remoteURL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
 <p align="center">

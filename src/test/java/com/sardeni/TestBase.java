@@ -17,7 +17,7 @@ public class TestBase {
     static void beforeAll() {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-        Configuration.browser = System.getProperty("BrowserName", "chrome");
+        Configuration.browser = System.getProperty("browserName", "chrome");
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://hh.ru";
         Configuration.remote = System.getProperty("remoteURL");

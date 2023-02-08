@@ -14,7 +14,7 @@ public class HhVacancyTests extends TestBase {
     @Tag("smoke")
     @Tag("regress")
     @DisplayName("Названия вакансии, зарплата, опыт, формат работы, оформление")
-    public void checkTitleVacanCy() {
+    public void titleVacancyTest() {
 
         step("Название вакансии, З/П, опыт", () -> {
 
@@ -30,8 +30,8 @@ public class HhVacancyTests extends TestBase {
 
     @Test
     @Tag("regress")
-    @DisplayName("Проверка блока о компании: название, лого, иконнка проверки")
-    public void checkBlockCompanyData() {
+    @DisplayName("Проверка блока о компании: название, лого, иконка проверки")
+    public void blockCompanyDataTest() {
 
         step("Название компании и ссылка на профиль", () -> {
             $$("span[data-qa=bloko-header-2] span").last().shouldHave(text("Americor Funding Inc"));
@@ -50,7 +50,7 @@ public class HhVacancyTests extends TestBase {
 
     @Test
     @DisplayName("Проверка текста о компании в вакансии")
-    public void checkAboutCompanyText() {
+    public void textAboutCompanyTest() {
 
         step("Проверяем текст о компании в вакансии", () -> {
             $("[data-qa=vacancy-description]").shouldHave(text("Техническая команда распределена по миру и находится в разных странах и часовых поясах."));
@@ -61,7 +61,7 @@ public class HhVacancyTests extends TestBase {
 
     @Test
     @DisplayName("Проверка ключевых навыков в вакансии")
-    public void checkKeySkills() {
+    public void keySkillsTest() {
 
         step("Проверяем заголовок", () -> {
             $$("h2[data-qa=bloko-header-2]").first().shouldHave(text("Ключевые навыки"));
@@ -73,7 +73,7 @@ public class HhVacancyTests extends TestBase {
 
     @Test
     @DisplayName("Блок с вопросами о компании")
-    public void checkQuestionsAboutCompany() {
+    public void questionsAboutCompanyTest() {
 
         step("Проверяем заголовок", () -> {
             $$("h2[data-qa=bloko-header-1]").first().shouldHave(text("Задайте вопрос работодателю"));
@@ -85,7 +85,7 @@ public class HhVacancyTests extends TestBase {
 
     @Test
     @DisplayName("Блок с отзывами о компании")
-    public void checkReviewsAboutCompany() {
+    public void reviewsAboutCompanyTest() {
 
         step("Проверяем заголовок", () -> {
             $("h1[data-qa=bloko-header-1]").shouldHave(text("Отзывы о компании"));
