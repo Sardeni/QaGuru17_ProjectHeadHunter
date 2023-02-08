@@ -60,7 +60,6 @@ gradle clean test
 ```
 gradle clean
 test/smoke_tests/regress_tests - запуск всех тестов/только smoke/только regress
--Dbrowser=${browserName}
 -DbrowserVersion=${browserVersion}
 -DbrowserSize=${browserSize}
 -DremoteUrl=${remoteURL}

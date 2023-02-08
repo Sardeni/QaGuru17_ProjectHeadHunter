@@ -8,10 +8,12 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.VacancyPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
+    VacancyPage vacancyPage = new VacancyPage();
 
     @BeforeAll
     static void beforeAll() {
